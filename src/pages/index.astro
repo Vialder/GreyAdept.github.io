@@ -15,7 +15,7 @@ let imgScale = 1;
  	 <body>
 		<main>
 			<div class="column-layout">
-				<a href="/antennaroots" class="box-overlay">
+				<a href="/antennaroots" class="box-overlay-left">
 				<div class="black-box">
 					<h1>
 						<p><u><h1 id="Antenna_Roots" class="font-extralight"><a href="/antennaroots">Antenna Roots</a></h1></u></p>
@@ -23,7 +23,7 @@ let imgScale = 1;
 					<a href="/tekijat"><div id="white-line" class="line"></div></a>
 				</div>
 				</a>
-				<a href="/tyhjyydenvalu" class="box-overlay">
+				<a href="/tyhjyydenvalu" class="box-overlay-right">
 				<div class="white-box">
 					<h1>
 						<p><u><h1 id="Tyhjyyden_Valu" class="font-extralight"><a href="/tyhjyydenvalu">Tyhjyyden Valu</a></h1></u></p>
@@ -86,16 +86,28 @@ let imgScale = 1;
 		position: relative;
 	}
 
-	.box-overlay
+	.box-overlay-left
 	{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		width: 50%;
 		height: 100%;
 		z-index: 1;
 		cursor: pointer;
 	}
+
+	.box-overlay-right
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		z-index: 1;
+		cursor: pointer;
+	}
+
 	.black-box
 	{
 		background-color: black;
