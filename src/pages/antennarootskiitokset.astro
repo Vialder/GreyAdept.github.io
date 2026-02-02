@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import '@fontsource/notable';
+import '@fontsource-variable/hepta-slab';
+let imgScale = 1;
+---
+
+<Layout title="Antenna Roots">
+	<!doctype html>
+	<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Antenna Roots" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <div class="main-content">
+		<h1 id="title" class="font-extralight">Tekijät</h1>
+		<section>
+				<div class="essaybox">
+					<p>
+						<b>Asta Leppä, "Ebba"</b>
+					</p>
+					<p>
+					on esseisti, journalisti ja valokuvataiteilija, Valokuvakeskus Peri ry:n jäsen. Hän yhdistelee taiteellisessa työssään esseistiikkaa, omakohtaisuutta ja filosofisia käsitteitä kuvalliseen ajatteluun. 
+					</p>
+					<br>
+					<p>
+						<b>Juho Vihervuori</b>
+					</p>
+					<p>
+						on muusikko ja äänitaiteilija, joka on tehnyt musiikkia yli 20 vuoden ajan. Hän on säveltänyt musiikkia muun muassa lyhytelokuviin ja animaatioihin sekä soittanut ja laulanut useissa eri kokoonpanoissa. Hänen työssään ääni toimii sekä tilallisena että kerronnallisena elementtinä.
+					</p>
+			</section>
+		<h1 id="title" class="font-extralight">Haluamme kiittää</h1>
+        <article>
+			<ul>
+				<li><b>Viljo Leppä</b>, insinööriopiskelija</li>
+				<li><b>Launo Laatikainen</b>, insinööri</li>
+				<li><b>Katariina Mäkelä</b>, kuvataideopiskelija</li>
+				<li><b>Liisa Leppä</b></li>
+				<li><b>Defne Dinç</b></li>
+				<li><b>Jaakko Vastapuu</b></li>
+				<li><b>Hannes Hietarinta</b></li>
+				<li><b>Suvi Vihervuori</b></li>
+			</ul>
+		</article>
+		<br>
+        <nav>
+            <ul>
+                <li><u><h1 id="takaisin" class="font-extralight"><a href="/antennaroots">Takaisin</a></h1></u></li>         
+            </ul>
+        </nav>	
+	</div>
+  </body>
+  
+</html>
+</Layout>
+
+<style define:vars={{ imgScale }}>
+
+	body {
+		margin: 0px;
+		padding: 0em;
+		background-color: black;
+		min-height: 100vh;
+        color: white;
+		overflow: auto;
+	}
+
+    .main-content {
+        max-width: 100vh;
+        height: auto;
+        margin-left:auto;
+        margin-right:auto;
+        position: relative;
+        overflow: auto;
+
+    }
+
+	article {
+		display: flex;
+		justify-content: center;
+	}
+
+    .image-container {
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        margin-top: 10vh;
+    }
+
+    h1 {
+		line-height: normal;
+		text-align: center;
+		font-family: 'Hepta Slab Variable', serif;	
+        font-size: 2rem;
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+	}
+
+	h2 {
+		font-family: 'Hepta Slab Variable', serif;	
+		text-align: center;
+	}
+
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        position:relative;
+        bottom: 0;
+    }
+
+    nav ul li {
+        float:left;
+    }
+
+    nav ul li a {
+        display: inline;
+        text-align: center;
+        padding: 14px 32px;
+    }
+
+    @media (max-width: 600px) {
+
+        .main-content
+        {
+            max-width: 100vw;
+        }
+
+		h1 {
+			font-size: 1.8rem;
+            padding-top: 2px;
+            padding-bottom: 2px;
+		}
+
+        nav ul {    
+        list-style-type: none;
+        display: block;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        nav ul li {
+        float:none;
+        }
+
+        nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 5px 5px;
+        }
+	}
+	
+</style>
+
