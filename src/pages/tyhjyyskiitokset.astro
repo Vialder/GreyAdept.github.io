@@ -6,74 +6,105 @@ import '@fontsource-variable/hepta-slab';
 let imgScale = 1;
 ---
 
-<Layout title="Tekijät">
+<Layout title="Tyhjyyden Valu">
 	<!doctype html>
 	<html lang="en">
- 	 	<head>
-    		<title>Tyhjyyden Valu</title>
- 	 	</head>
- 	 <body>
-		<main>
-			<section>
-				<h1 id="title" class="font-extralight">Tyhjyyden valu</h1>
-			</section>
-			<section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Tekijät & Kiitokset" />
+    <title>Kiitokset</title>
+  </head>
+  <body>
+    <div class="main-content">
+		<h1 id="title" class="font-extralight">Tekijät & Kiitokset</h1>
+		<section>
 				<div class="essaybox">
 					<br>
+					<p>
+						<b>Asta Leppä, "Ebba"</b>
+					</p>
+					<p>
+					on esseisti, journalisti ja valokuvataiteilija, Valokuvakeskus Peri ry:n jäsen. Hän yhdistelee taiteellisessa työssään esseistiikkaa, omakohtaisuutta ja filosofisia käsitteitä kuvalliseen ajatteluun. 
+					</p>
 					<br>
-					<em>Tekijät haluavat kiittää:</em>
+					<p>
+						<b>Juho Vihervuori</b>
+					</p>
+					<p>
+						on muusikko ja äänitaiteilija, joka on tehnyt musiikkia yli 20 vuoden ajan. Hän on säveltänyt muun muassa lyhytelokuviin ja animaatioihin sekä soittanut ja laulanut useissa eri kokoonpanoissa. Hänen työssään ääni toimii sekä tilallisena että kerronnallisena elementtinä.
+					</p>
 					<br>
-					<br>
-					<b>Aatu Leppä</b>, insinööriopiskelija, Turun Ammattikorkeakoulu, verkkosivun toteutus
-					<br>
-					<b>Jori Hulkkonen</b>, muusikko, musiikin masterointi
-					<br>
-					<b>Taavi Rekkaro</b>, valokuvataiteilija, ArtProof, Viro
-					<br>
-					<b>Matti-Juhana Ikonen</b>, JAS Tekniikka Oy
-					<br>
-					<b>Liisa Vähäkylä</b>, kuvataiteilija
-					<br>
-					<b>Aapeli Leppä</b>, maantieteen opiskelija, Helsingin Yliopisto
-					<br>
-					<b>Kirsi Leimu</b>, museoamanuenssi
-					<br>
-					<b>Defne Dinç</b>, laulaja (vokaalit: Sementin leiju ja Kammio)
-					<br>
-					<b>Ari Heinonen</b>, valokuvaaja
-					<br>
-					<b>Katariina Mäkelä</b>, kuvataideopiskelija
-					
-					<h1>
-						<p><u><h1 id="takaisin" class="font-extralight"><a href="/tyhjyydenvalu">Takaisin</a></h1></u></p>
-					</h1>
 			</section>
-            
-		</main>
-		<hr>
-  	</body>
-	</html>
+		<h1 id="title" class="font-extralight">Kiitokset</h1>
+		<br>
+        <article>
+			<ul>
+				<li><b>Viljo Leppä</b></li>
+				<li><b>Jori Hulkkonen</b></li>
+				<li><b>Taavi Rekkaro</b></li>
+				<li><b>Matti-Juhana Ikonen</b></li>
+				<li><b>Liisa Vähäkylä</b></li>
+				<li><b>Aapeli Leppä</b></li>
+				<li><b>Kirsi Leimu</b></li>
+				<li><b>Defne Dinç</b></li>
+				<li><b>Ari Heinonen</b></li>
+				<li><b>Katariina Mäkelä</b></li>
+			</ul>
+		</article>
+		<br>
+        <nav>
+            <ul>
+                <li><u><h1 id="takaisin" class="font-extralight"><a href="/tyhjyydenvalu">Takaisin</a></h1></u></li>         
+            </ul>
+        </nav>	
+	</div>
+  </body>
+  
+</html>
 </Layout>
 
 <style define:vars={{ imgScale }}>
 
 	body {
-		display: flex;
-		flex-direction: column;
 		margin: 0px;
 		padding: 0em;
 		background-color: white;
-		/*overflow: hidden;*/
-		/*min-height: 100svh;*/
+		min-height: 100vh;
+        color: black;
+		overflow: auto;
 	}
-	
-	h1 {
+
+    .main-content {
+        max-width: 100vh;
+        height: auto;
+        margin-left:auto;
+        margin-right:auto;
+        position: relative;
+        overflow: auto;
+
+    }
+
+	article {
+		display: flex;
+		justify-content: left;
+	}
+
+    .image-container {
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        margin-top: 10vh;
+    }
+
+    h1 {
 		line-height: normal;
-		color: black;	
-		text-align: center;
+		text-align: left;
 		font-family: 'Hepta Slab Variable', serif;	
-		margin-bottom: 20px;
-		margin-top: 10px;
+        font-size: 2rem;
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
 	}
 
 	h2 {
@@ -81,363 +112,58 @@ let imgScale = 1;
 		text-align: center;
 	}
 
-	.essaybox
-	{
-		overflow: auto;
-		max-width: 50%;
-		width: 50%;
-		margin: auto;
-		
-	}
 
-	#footer {
-		position:fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		gap: 2rem;
-		padding-top: 1%;
-		z-index: 999;
-	}
-
-    .gallery_img {
-        max-width: 100%;
-		width: 80%;
-		display: block;
-		transform-origin: top;
-		transition: all 5s ease-in-out;
-		margin: auto;
-		cursor: pointer;
-		opacity: 0.5;
-		
-    }
-    
-	
-	.swiper {
-	    overflow: visible;
-	}
-
-
-    #buttonsandbars {
-		display: flex;
-        margin:auto;
-        flex-direction: row;
+    nav ul {
+        list-style-type: none;
+        display: flex;
         justify-content: center;
-		gap: 3px;
-		margin-top: 150px;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        position:relative;
+        bottom: 0;
     }
 
-	#imgcontainer{
-		width: 100%;
-		max-width: 50vh;
-        margin: auto;
-		transition: all 5s ease-in-out;
-		flex-direction: column;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		
-	}
-
-	#imgandbutton{
-		
-		display: block;
-		width: 100%;
-		max-width: 100%;
-		margin:auto;
-		transition: all 5s ease-in-out;
-	}
-	
-	.swiper-button-prev {
-		color: black;
-	}
-	.swiper-button-next {
-		color: black;
-	}
-
-	.swiper-slide
-	{
-		transition: all 1s;
-		margin-left: auto;
-		margin-right: auto;
-		
-  
-	}
-
-    #image_swiper
-    {
-        margin-left: auto;
-        margin-right: auto;
-		/*width: 50%;*/
-        
+    nav ul li {
+        float:left;
     }
 
+    nav ul li a {
+        display: inline;
+        text-align: center;
+        padding: 14px 32px;
+    }
 
-	#playbutton{
-		visibility: visible;
-	}
-	
-	#pausebutton{
-		visibility: hidden;
-	}
+    @media (max-width: 600px) {
 
-	.controlbutton{
-		display: inline-block;
-		opacity: 0.5;
-		cursor:pointer;
-		transition: opacity 0.5s ease-in-out;
-	}
+        .main-content
+        {
+            max-width: 100vw;
+        }
 
-	.controlbutton:hover {
-		opacity: 1;
-	}
-
-	.controlbutton:active {
-		opacity: 1;
-	}
-
-	h1{
-		font-size: 1.2rem;
-	}
-
-	@media (min-width: 992px) {
 		h1 {
-			font-size: 2rem;
+			font-size: 1.8rem;
+            padding-top: 2px;
+            padding-bottom: 2px;
 		}
+
+        nav ul {    
+        list-style-type: none;
+        display: block;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        nav ul li {
+        float:none;
+        }
+
+        nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 5px 5px;
+        }
 	}
-
-.playing {
-  position: absolute;
-  display: block;
-  margin-top: 25px;
-}
-.now.playing .bar {
-  display: inline-block;
-  margin-right: 1px;
-  
-  width: 2px;
-  height: 1px;
-  overflow: hidden;
-  background: grey;
-  color: transparent;
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: 0;
- 
-  
-  
-}
-
-.paused.playing .bar {
-  animation-iteration-count: infinite;
-}
-
-
-.n1 {
-  animation-delay: 0.6s;
-}
-.n2 {
-  animation-delay: 0.3s;
-}
-.n3 {
-  animation-delay: 1.4s;
-}
-.n4 {
-  animation-delay: 1.0s;
-}
-.n5 {
-  animation-delay: 2.4s;
-}
-.n6 {
-  animation-delay: 1.4s;
-}
-.n7 {
-  animation-delay: 3.2s;
-}
-.n8 {
-  animation-delay: 2.0s;
-}
-@keyframes pulse {
-  0% {
-    height: 1px;
-    margin-top: 0;
-  }
-  10% {
-    height: 20px;
-    margin-top: -20px;
-  }
-  50% {
-    height: 10px;
-    margin-top: -10px;
-  }
-  60% {
-    height: 20px;
-    margin-top: -20px;
-  }
-  80% {
-    height: 30px;
-    margin-top: -30px;
-  }
-  100% {
-    height: 1px;
-    margin-top: 0;
-  }
-}
+	
 </style>
-
-<script>
-	import Swiper from 'swiper';
-	import { Navigation, Pagination } from 'swiper/modules';
-	// import Swiper and modules styles
-	import 'swiper/css';
-	import 'swiper/css/navigation';
-	import 'swiper/css/pagination';
-
-	const swiper = new Swiper('.swiper', {
-	
-	//swiper modules
-	modules: [Navigation, Pagination],
-	
-	// Optional parameters
-	direction: 'horizontal',
-	loop: true,
-	autoHeight: true,
-    speed: 600,
-  
-	// If we need pagination
-	pagination: {
-	  el: '.swiper-pagination',
-	},
-  
-	// Navigation arrows
-	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev',
-	},
-  });
-	//test
-    if(window.location.hash) {
-		var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character'
-		swiper.slideTo(Number(hash)-1)
-	}
-
-	const button = document.querySelector("#Capa_1");
-
-	const pauseButton = document.getElementById("pausebutton");
-	const playButton = document.getElementById("playbutton");
-
-	const allImages = Array.from(document.getElementsByClassName("gallery_img") as HTMLCollectionOf<HTMLElement>);
-	const image1 = document.getElementById("img1");
-
-	const arrow1 = document.getElementById("arrow1");
-	const arrow2 = document.getElementById("arrow2");
-
-
-	//var audio = new Audio('https://pub-6a26b65f31aa4f40b5c418ef13aac133.r2.dev/Be%20-%20Kindle%202023-09-09.flac');
-	var audio = new Audio('https://dl.dropbox.com/scl/fi/7096koz7nj3ao6ph109er/t.wav?rlkey=8c4i46s1lg225sy5gow8autmn&st=yoq2nrck');
-	audio.volume = 0;
-
-	var player = document.getElementById("music");
-	
-	
-	//img1Obj.style.opacity = "0.5";
-	
-
-	function imageUp() {
-		togglePause();
-		audio.volume = 0;
-		volumeUp();
-		
-		//img1Obj.style.width = "100%";
-		//img1Obj.style.opacity = "2";
-		pauseButton.style.visibility = "visible";
-		playButton.style.visibility = "hidden";
-		console.log(audio.paused);
-		player.style.visibility = "visible";
-		player.classList.toggle("paused");
-		
-
-		for (let i = 0; i < allImages.length; i++) 
-		{
-  			allImages[i].style.width = "100%"
-			allImages[i].style.opacity = "1"
-		}
-	}
-
-	function imageDown() {
-		audio.volume = 1;
-		volumeDown();
-		//img1Obj.style.width = "70%";
-		//img1Obj.style.opacity = "0.5"
-		
-		pauseButton.style.visibility = "hidden";
-		playButton.style.visibility = "visible";
-		console.log(audio.paused);
-		player.classList.toggle("paused");
-
-		for (let i = 0; i < allImages.length; i++) 
-		{
-  			allImages[i].style.width = "80%";
-			allImages[i].style.opacity = "0.5";
-		}
-	}
-
-	function togglePause() {
-		if (audio.paused) {
-			audio.play();
-		}
-		else {
-			audio.pause();
-		}
-	}
-
-
-	function volumeUp() {
-		if (audio.volume < 0.9) {
-			audio.volume += 0.1;
-			var timer = setTimeout(volumeUp,100);
-		} else {
-			audio.volume = 1;
-		}
-		}
-		
-	function volumeDown() {
-		if (audio.volume > 0.1) {
-			audio.volume -= 0.1;
-			var timer = setTimeout(volumeDown,100);
-		} 
-		else{
-			audio.volume = 0;
-			togglePause();
-		}	
-	}
-
-
-
-    image1.addEventListener('click', () => {
-		console.log("it works");
-		if (document.getElementById("pausebutton").style.visibility == "visible") {
-			imageDown();
-		} else {
-			imageUp()	
-		}
-
-	});
-	
-    button.addEventListener('click', () => {
-		console.log("it works");
-		if (document.getElementById("pausebutton").style.visibility == "visible") {
-			imageDown();
-		} else {
-			imageUp();
-		}
-		
-	});
-	
-
-	
-</script>
 
